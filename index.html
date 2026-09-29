@@ -1,0 +1,1815 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> CRP Air Conditioning Services LLC | Specialized HVAC & Cleanroom Solutions — Dubai, UAE</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;600;700;800;900&family=Barlow:wght@300;400;500&family=DM+Mono:wght@300;400&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      --ice: #F4FAFC;
+      --frost: #DCEFF5;
+      --steel: #102A3A;
+      --arctic: #071A24;
+      --cold: #102A3A;
+      --cyan: #00B4D8;
+      --bright: #48CAE4;
+      --white: #F5FAFD;
+      --muted: #7A9BAF;
+      --accent: #00C896;
+      --dark: #041018
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box
+    }
+
+    html {
+      scroll-behavior: smooth
+    }
+
+    body {
+      font-family: 'Barlow', sans-serif;
+      background: var(--arctic);
+      color: var(--white);
+      overflow-x: hidden
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 4rem;
+      background: rgba(7, 19, 25, 0.92);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(0, 180, 216, 0.12)
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 1rem
+    }
+
+    /* ── LOGO SLOT ──
+     The div below is the logo container. To use the real logo image, replace its contents with:
+     <img src="https://static.wixstatic.com/media/e8c379_8eb8925b755a48ebbe9c5b077319d4a3~mv2_d_4538_4674_s_4_2.jpg" alt="CRP" style="height:52px;width:auto;object-fit:contain;">
+     OR upload the logo file and set the src to its path.
+  */
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem
+    }
+
+    .logo-img-slot img {
+      height: 52px;
+      width: auto;
+      object-fit: contain;
+      /* This filter removes the white background and keeps colors vivid */
+      filter: drop-shadow(0 0 0 white);
+      mix-blend-mode: normal;
+      /* Ensures it's not dull */
+    }
+
+    .logo-wordmark {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: 0.82rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      line-height: 1.35;
+      color: var(--ice)
+    }
+
+    .logo-wordmark span {
+      display: block;
+      font-weight: 300;
+      font-size: 0.68rem;
+      color: var(--muted)
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2.2rem;
+      list-style: none
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--muted);
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 600;
+      font-size: 0.82rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      transition: color 0.2s
+    }
+
+    .nav-links a:hover {
+      color: var(--cyan)
+    }
+
+    .nav-cta {
+      background: var(--cyan);
+      color: var(--arctic);
+      padding: 0.6rem 1.5rem;
+      border: none;
+      border-radius: 3px;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: 0.78rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.2s;
+      white-space: nowrap
+    }
+
+    .nav-cta:hover {
+      background: var(--bright);
+      box-shadow: 0 0 20px rgba(0, 180, 216, 0.5)
+    }
+
+    .hero {
+      min-height: 100vh;
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      position: relative;
+      overflow: hidden
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 55% 70% at 75% 50%, rgba(11, 61, 94, 0.55) 0%, transparent 70%), radial-gradient(ellipse 35% 50% at 5% 85%, rgba(0, 180, 216, 0.07) 0%, transparent 60%), linear-gradient(155deg, var(--dark) 0%, #0a1e2a 100%)
+    }
+
+    .hero-grid {
+      position: absolute;
+      inset: 0;
+      background-image: linear-gradient(rgba(0, 180, 216, 0.035) 1px, transparent 1px), linear-gradient(90deg, rgba(0, 180, 216, 0.035) 1px, transparent 1px);
+      background-size: 55px 55px
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 9rem 4rem 5rem
+    }
+
+    .eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 0.9rem;
+      margin-bottom: 2rem
+    }
+
+    .eyebrow-line {
+      width: 36px;
+      height: 2px;
+      background: var(--cyan)
+    }
+
+    .eyebrow-text {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--cyan)
+    }
+
+    h1 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 900;
+      font-size: clamp(3.2rem, 5.5vw, 5.2rem);
+      line-height: 0.93;
+      text-transform: uppercase;
+      color: var(--white)
+    }
+
+    h1 em {
+      font-style: normal;
+      color: var(--cyan)
+    }
+
+    .hero-sub {
+      font-size: 0.95rem;
+      color: var(--muted);
+      font-weight: 300;
+      line-height: 1.8;
+      max-width: 500px;
+      margin: 1.8rem 0 2.5rem;
+      border-left: 2px solid var(--cyan);
+      padding-left: 1.2rem
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+      flex-wrap: wrap
+    }
+
+    .btn-primary {
+      background: var(--cyan);
+      color: var(--arctic);
+      padding: 0.85rem 2rem;
+      border: none;
+      border-radius: 3px;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: 0.88rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      transition: all 0.2s
+    }
+
+    .btn-primary:hover {
+      background: var(--bright);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(0, 180, 216, 0.4)
+    }
+
+    .btn-ghost {
+      background: transparent;
+      color: var(--ice);
+      padding: 0.85rem 1.8rem;
+      border: 1px solid rgba(0, 180, 216, 0.35);
+      border-radius: 3px;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 600;
+      font-size: 0.88rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      transition: all 0.2s
+    }
+
+    .btn-ghost:hover {
+      border-color: var(--cyan);
+      color: var(--cyan)
+    }
+
+    .hero-badges {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 9rem 4rem 5rem 2rem;
+      gap: 1.2rem
+    }
+
+    .badge-item {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(0, 180, 216, 0.1);
+      border-radius: 6px;
+      padding: 1.1rem 1.4rem;
+      transition: border-color 0.3s, background 0.3s
+    }
+
+    .badge-item:hover {
+      border-color: rgba(0, 180, 216, 0.35);
+      background: rgba(0, 180, 216, 0.04)
+    }
+
+    .badge-icon {
+      font-size: 1.4rem;
+      min-width: 28px
+    }
+
+    .badge-text {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: 0.82rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--ice)
+    }
+
+    .badge-text span {
+      display: block;
+      font-family: 'Barlow', sans-serif;
+      font-weight: 300;
+      font-size: 0.7rem;
+      letter-spacing: 0.03em;
+      color: var(--muted);
+      text-transform: none;
+      margin-top: 0.15rem
+    }
+
+    .hero-scroll {
+      position: absolute;
+      bottom: 2rem;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem
+    }
+
+    .scroll-text {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.6rem;
+      letter-spacing: 0.2em;
+      color: var(--muted);
+      text-transform: uppercase
+    }
+
+    .scroll-line {
+      width: 1px;
+      height: 38px;
+      background: linear-gradient(to bottom, var(--cyan), transparent);
+      animation: scrollPulse 2s ease-in-out infinite
+    }
+
+    @keyframes scrollPulse {
+
+      0%,
+      100% {
+        opacity: 0.3;
+        transform: scaleY(0.6)
+      }
+
+      50% {
+        opacity: 1;
+        transform: scaleY(1)
+      }
+    }
+
+    .ticker {
+      background: var(--cold);
+      overflow: hidden;
+      white-space: nowrap;
+      padding: 0.75rem 0;
+      border-top: 1px solid rgba(0, 180, 216, 0.2);
+      border-bottom: 1px solid rgba(0, 180, 216, 0.2)
+    }
+
+    .ticker-inner {
+      display: inline-block;
+      animation: ticker 35s linear infinite
+    }
+
+    .ticker-inner span {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.7rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--frost);
+      padding: 0 2.5rem
+    }
+
+    .ticker-inner span.dot {
+      color: var(--cyan);
+      padding: 0 0.8rem
+    }
+
+    @keyframes ticker {
+      0% {
+        transform: translateX(0)
+      }
+
+      100% {
+        transform: translateX(-50%)
+      }
+    }
+
+    .trust-bar {
+      background: rgba(0, 0, 0, 0.25);
+      border-bottom: 1px solid rgba(0, 180, 216, 0.1);
+      padding: 2rem 4rem
+    }
+
+    .trust-inner {
+      max-width: 1300px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 2.5rem
+    }
+
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem
+    }
+
+    .trust-check {
+      color: var(--cyan);
+      font-size: 0.9rem
+    }
+
+    .trust-label {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 600;
+      font-size: 0.8rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--frost)
+    }
+
+    .trust-label2 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 600;
+      font-size: 0.8rem;
+      letter-spacing: 0.1em;
+      color: var(--frost)
+    }
+
+
+    .section-wrap {
+      max-width: 1300px;
+      margin: 0 auto;
+      padding: 0 4rem
+    }
+
+    .section-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.7rem;
+      margin-bottom: 1.2rem
+    }
+
+    .tag-line {
+      width: 28px;
+      height: 2px;
+      background: var(--cyan)
+    }
+
+    .tag-text {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.68rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--cyan)
+    }
+
+    h2 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 900;
+      font-size: clamp(2rem, 3.5vw, 3.2rem);
+      text-transform: uppercase;
+      line-height: 1
+    }
+
+    h2 span {
+      color: var(--cyan)
+    }
+
+    .industries-section {
+      padding: 7rem 0
+    }
+
+    .sec-header {
+      text-align: center;
+      margin-bottom: 3.5rem
+    }
+
+    .sec-header p {
+      color: var(--muted);
+      font-size: 0.9rem;
+      font-weight: 300;
+      line-height: 1.7;
+      max-width: 600px;
+      margin: 0.8rem auto 0
+    }
+
+    .industries-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: rgba(0, 180, 216, 0.08);
+      border-radius: 10px;
+      overflow: hidden;
+      border: 1px solid rgba(0, 180, 216, 0.12)
+    }
+
+    .industry-card {
+      background: var(--arctic);
+      padding: 2.5rem;
+      transition: background 0.3s;
+      position: relative;
+      overflow: hidden;
+      cursor: default
+    }
+
+    .industry-card:hover {
+      background: rgba(0, 180, 216, 0.05)
+    }
+
+    .industry-card::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--cyan);
+      transition: width 0.4s
+    }
+
+    .industry-card:hover::after {
+      width: 100%
+    }
+
+    .ind-icon {
+      font-size: 2rem;
+      margin-bottom: 1.2rem;
+      display: block
+    }
+
+    .ind-title {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 800;
+      font-size: 1.05rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--ice);
+      margin-bottom: 0.7rem
+    }
+
+    .ind-desc {
+      font-size: 0.82rem;
+      color: var(--muted);
+      line-height: 1.75;
+      font-weight: 300
+    }
+
+    .services-section {
+      padding: 7rem 0;
+      background: linear-gradient(180deg, transparent, rgba(11, 61, 94, 0.12), transparent)
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.2rem
+    }
+
+    .service-card {
+      background: rgba(255, 255, 255, 0.025);
+      border: 1px solid rgba(0, 180, 216, 0.1);
+      border-radius: 8px;
+      padding: 2rem 1.8rem;
+      transition: all 0.3s;
+      position: relative;
+      overflow: hidden
+    }
+
+    .service-card:hover {
+      background: rgba(0, 180, 216, 0.06);
+      border-color: rgba(0, 180, 216, 0.3);
+      transform: translateY(-4px);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3)
+    }
+
+    .svc-icon {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      display: block
+    }
+
+    .svc-title {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 800;
+      font-size: 0.95rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--ice);
+      margin-bottom: 0.6rem
+    }
+
+    .svc-desc {
+      font-size: 0.8rem;
+      color: var(--muted);
+      line-height: 1.75;
+      font-weight: 300
+    }
+
+    .svc-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-family: 'DM Mono', monospace;
+      font-size: 0.65rem;
+      letter-spacing: 0.1em;
+      color: var(--cyan);
+      text-decoration: none;
+      text-transform: uppercase;
+      margin-top: 1rem;
+      transition: gap 0.2s
+    }
+
+    .svc-link:hover {
+      gap: 0.7rem
+    }
+
+    .whyus-section {
+      padding: 7rem 0
+    }
+
+    .whyus-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: start;
+      margin-top: 3.5rem
+    }
+
+    .whyus-items {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem
+    }
+
+    .why-item {
+      padding: 1.8rem;
+      border-left: 2px solid rgba(0, 180, 216, 0.2);
+      transition: border-color 0.3s, background 0.3s;
+      border-radius: 0 6px 6px 0
+    }
+
+    .why-item:hover {
+      border-color: var(--cyan);
+      background: rgba(0, 180, 216, 0.04)
+    }
+
+    .why-title {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 800;
+      font-size: 1rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--ice);
+      margin-bottom: 0.5rem
+    }
+
+    .why-desc {
+      font-size: 0.83rem;
+      color: var(--muted);
+      line-height: 1.75;
+      font-weight: 300
+    }
+
+    .compliance-box {
+      background: linear-gradient(135deg, rgba(0, 180, 216, 0.07), rgba(11, 61, 94, 0.35));
+      border: 1px solid rgba(0, 180, 216, 0.18);
+      border-radius: 10px;
+      padding: 2.5rem;
+      position: sticky;
+      top: 6rem
+    }
+
+    .compliance-title {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 800;
+      font-size: 1.1rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--ice);
+      margin-bottom: 1.5rem
+    }
+
+    .comp-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem
+    }
+
+    .comp-item {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem
+    }
+
+    .comp-check {
+      color: var(--cyan);
+      font-size: 0.85rem
+    }
+
+    .comp-text {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 600;
+      font-size: 0.82rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--frost)
+    }
+
+    .comp-text2 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 600;
+      font-size: 0.82rem;
+      letter-spacing: 0.08em;
+      color: var(--frost)
+    }
+
+    .projects-section {
+      padding: 7rem 0;
+      background: rgba(0, 0, 0, 0.2)
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem
+    }
+
+    .project-card {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(0, 180, 216, 0.1);
+      border-radius: 8px;
+      padding: 2.2rem;
+      transition: all 0.3s
+    }
+
+    .project-card:hover {
+      border-color: rgba(0, 180, 216, 0.35);
+      background: rgba(0, 180, 216, 0.04);
+      transform: translateY(-3px)
+    }
+
+    .proj-client {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 800;
+      font-size: 1rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--ice);
+      margin-bottom: 0.3rem
+    }
+
+    .proj-loc {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.65rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--cyan);
+      margin-bottom: 1.2rem
+    }
+
+    .proj-lbl {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.6rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 0.4rem
+    }
+
+    .proj-scope {
+      font-size: 0.83rem;
+      color: var(--frost);
+      font-weight: 300;
+      line-height: 1.6
+    }
+
+    .proj-mini-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      margin-top: 1.5rem
+    }
+
+    .proj-mini {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(0, 180, 216, 0.08);
+      border-radius: 6px;
+      padding: 1.2rem 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.9rem;
+      transition: all 0.3s
+    }
+
+    .proj-mini:hover {
+      border-color: rgba(0, 180, 216, 0.25);
+      background: rgba(0, 180, 216, 0.03)
+    }
+
+    .proj-dot {
+      width: 6px;
+      height: 6px;
+      background: var(--cyan);
+      border-radius: 50%;
+      flex-shrink: 0
+    }
+
+    .proj-name {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: 0.85rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--frost)
+    }
+
+    .cta-band {
+      padding: 5rem 0;
+      background: linear-gradient(135deg, rgba(11, 61, 94, 0.5), rgba(0, 180, 216, 0.08));
+      border-top: 1px solid rgba(0, 180, 216, 0.15);
+      border-bottom: 1px solid rgba(0, 180, 216, 0.15);
+      text-align: center
+    }
+
+    .cta-band h2 {
+      font-size: clamp(1.8rem, 3vw, 2.8rem);
+      margin-bottom: 1rem
+    }
+
+    .cta-band p {
+      color: var(--muted);
+      font-weight: 300;
+      font-size: 0.95rem;
+      max-width: 560px;
+      margin: 0 auto 2rem;
+      line-height: 1.7
+    }
+
+    .btn-row {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap
+    }
+
+    .contact-section {
+      padding: 7rem 0
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 5rem;
+      align-items: start
+    }
+
+    .contact-tagline {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 900;
+      font-size: clamp(2.2rem, 4vw, 3.8rem);
+      text-transform: uppercase;
+      line-height: 0.95;
+      margin-bottom: 1.2rem
+    }
+
+    .contact-tagline span {
+      color: var(--cyan)
+    }
+
+    .contact-lead {
+      font-size: 0.9rem;
+      color: var(--muted);
+      font-weight: 300;
+      line-height: 1.8;
+      max-width: 380px;
+      margin-bottom: 2.5rem
+    }
+
+    .contact-deets {
+      display: flex;
+      flex-direction: column;
+      gap: 1.4rem
+    }
+
+    .c-row {
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start
+    }
+
+    .c-icon {
+      color: var(--cyan);
+      font-size: 1rem;
+      margin-top: 0.25rem;
+      min-width: 18px;
+      text-align: center
+    }
+
+    .c-lbl {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.62rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 0.25rem
+    }
+
+    .c-val {
+      font-size: 0.88rem;
+      color: var(--ice)
+    }
+
+    .c-val a {
+      color: var(--ice);
+      text-decoration: none;
+      transition: color 0.2s
+    }
+
+    .c-val a:hover {
+      color: var(--cyan)
+    }
+
+    .form-box {
+      background: rgba(255, 255, 255, 0.025);
+      border: 1px solid rgba(0, 180, 216, 0.12);
+      border-radius: 10px;
+      padding: 2.5rem
+    }
+
+    .form-title {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 800;
+      font-size: 1.1rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--ice);
+      margin-bottom: 1.8rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid rgba(0, 180, 216, 0.1)
+    }
+
+    .fg {
+      margin-bottom: 1.3rem
+    }
+
+    .fl {
+      display: block;
+      font-family: 'DM Mono', monospace;
+      font-size: 0.62rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 0.45rem
+    }
+
+    .fi,
+    .fs,
+    .ft {
+      width: 100%;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(0, 180, 216, 0.18);
+      border-radius: 4px;
+      padding: 0.85rem 1.1rem;
+      color: var(--white);
+      font-family: 'Barlow', sans-serif;
+      font-size: 0.88rem;
+      outline: none;
+      transition: border-color 0.2s
+    }
+
+    .fi:focus,
+    .fs:focus,
+    .ft:focus {
+      border-color: var(--cyan);
+      box-shadow: 0 0 0 3px rgba(0, 180, 216, 0.08)
+    }
+
+    .ft {
+      resize: vertical;
+      min-height: 110px
+    }
+
+    .fs option {
+      background: var(--arctic)
+    }
+
+    .fr {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem
+    }
+
+    .fsub {
+      width: 100%;
+      background: var(--cyan);
+      color: var(--arctic);
+      padding: 0.95rem;
+      border: none;
+      border-radius: 4px;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 800;
+      font-size: 0.88rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: all 0.2s;
+      margin-top: 0.3rem
+    }
+
+    .fsub:hover {
+      background: var(--bright);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(0, 180, 216, 0.4)
+    }
+
+    footer {
+      background: var(--dark);
+      border-top: 1px solid rgba(0, 180, 216, 0.1);
+      padding: 4rem 4rem 2rem
+    }
+
+    .footer-top {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr 1fr;
+      gap: 3rem;
+      padding-bottom: 3rem;
+      border-bottom: 1px solid rgba(0, 180, 216, 0.08);
+      margin-bottom: 2rem
+    }
+
+    .footer-logo-row {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      margin-bottom: 1rem
+    }
+
+    /* Footer logo slot — same as nav */
+    .footer-logo-img {
+      height: 40px;
+      width: auto;
+      object-fit: contain
+    }
+
+    .footer-logo-mark {
+      width: 40px;
+      height: 40px;
+      background: linear-gradient(135deg, var(--cyan), var(--cold));
+      border-radius: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 900;
+      font-size: 0.9rem;
+      color: #fff;
+      flex-shrink: 0
+    }
+
+    .footer-brand-name {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: 0.88rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--ice);
+      line-height: 1.35
+    }
+
+    .footer-brand-name span {
+      display: block;
+      font-weight: 300;
+      font-size: 0.68rem;
+      color: var(--muted)
+    }
+
+    .footer-tagline {
+      font-size: 0.78rem;
+      color: var(--muted);
+      font-weight: 300;
+      line-height: 1.7;
+      margin-bottom: 1.2rem
+    }
+
+    .footer-mini-contact {
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem
+    }
+
+    .footer-mini-contact a {
+      font-size: 0.78rem;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.2s
+    }
+
+    .footer-mini-contact a:hover {
+      color: var(--cyan)
+    }
+
+    .fcol-title {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 800;
+      font-size: 0.78rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--ice);
+      margin-bottom: 1.2rem;
+      padding-bottom: 0.6rem;
+      border-bottom: 1px solid rgba(0, 180, 216, 0.1)
+    }
+
+    .fcol ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem
+    }
+
+    .fcol ul li a {
+      font-size: 0.78rem;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.2s;
+      font-weight: 300
+    }
+
+    .fcol ul li a:hover {
+      color: var(--cyan)
+    }
+
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem
+    }
+
+    .footer-copy {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.62rem;
+      letter-spacing: 0.08em;
+      color: var(--muted)
+    }
+
+    .footer-trust {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 600;
+      font-size: 0.75rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted)
+    }
+
+    .footer-trust span {
+      color: var(--cyan)
+    }
+
+    @keyframes pulseGlow {
+
+      0%,
+      100% {
+        box-shadow: 0 0 20px rgba(0, 180, 216, 0.3)
+      }
+
+      50% {
+        box-shadow: 0 0 40px rgba(0, 180, 216, 0.6)
+      }
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.6s ease, transform 0.6s ease
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0)
+    }
+
+    @media(max-width:1100px) {
+      .services-grid {
+        grid-template-columns: repeat(2, 1fr)
+      }
+
+      .footer-top {
+        grid-template-columns: 1fr 1fr
+      }
+    }
+
+    @media(max-width:900px) {
+      nav {
+        padding: 0.9rem 1.5rem
+      }
+
+      .nav-links {
+        display: none
+      }
+
+      .hero {
+        grid-template-columns: 1fr
+      }
+
+      .hero-badges {
+        display: none
+      }
+
+      .hero-content {
+        padding: 7rem 1.5rem 4rem
+      }
+
+      .section-wrap {
+        padding: 0 1.5rem
+      }
+
+      .trust-bar {
+        padding: 1.5rem
+      }
+
+      .industries-grid,
+      .services-grid,
+      .projects-grid,
+      .proj-mini-row {
+        grid-template-columns: 1fr
+      }
+
+      .whyus-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem
+      }
+
+      .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem
+      }
+
+      .contact-section {
+        padding: 4rem 0
+      }
+
+      footer {
+        padding: 3rem 1.5rem 1.5rem
+      }
+
+      .footer-top {
+        grid-template-columns: 1fr;
+        gap: 2rem
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        text-align: center
+      }
+
+      .fr {
+        grid-template-columns: 1fr
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ═══ NAV ═══ -->
+  <nav>
+    <div class="nav-logo">
+      <div class="logo-container">
+        <!--
+        ╔══════════════════════════════════════════════════════════╗
+        ║  LOGO: Replace the img src with the real logo file       ║
+        ║  Option 1 – Wix URL (may expire):                        ║
+        ║    src="https://static.wixstatic.com/media/             ║
+        ║    e8c379_8eb8925b755a48ebbe9c5b077319d4a3~mv2_d_        ║
+        ║    4538_4674_s_4_2.jpg"                                   ║
+        ║  Option 2 – Upload logo file & set src to its path       ║
+        ╚══════════════════════════════════════════════════════════╝
+      -->
+        <div class="logo-img-slot">
+          <img src="assets/WaveHQnoBG.png" alt="CRP Air Conditioning Services LLC"
+            onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <!-- Fallback mark shown if image fails to load -->
+          <div
+            style="display:none;width:48px;height:48px;background:linear-gradient(135deg,var(--cyan),var(--cold));border-radius:6px;align-items:center;justify-content:center;font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1rem;color:#fff;animation:pulseGlow 3s ease-in-out infinite">
+            CRP</div>
+        </div>
+        <div class="logo-wordmark">
+          CRP Air Conditioning Services LLC
+          <span>Dubai · UAE</span>
+        </div>
+      </div>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#industries">Industries</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#why-us">Why CRP</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="#contact" class="nav-cta">Get a Quote</a>
+  </nav>
+
+  <!-- ═══ HERO ═══ -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-grid"></div>
+    <div class="hero-content">
+      <div class="eyebrow">
+        <div class="eyebrow-line"></div>
+        <span class="eyebrow-text"> Cleanroom & HVAC Contractor · Dubai, UAE</span>
+      </div>
+      <h1>Specialized<br>Cleanroom &amp;<br><em>HVAC</em><br>Solutions</h1>
+      <p class="hero-sub">Precision engineered HVAC systems for pharmaceutical, electronic manufacturing, hospitals,
+        laboratories, operation theatres, and critical industrial facilities across the MENA region.</p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn-primary">Request Free Site Inspection</a>
+        <a href="#contact" class="btn-ghost">Speak to Our Team</a>
+      </div>
+    </div>
+    <div class="hero-badges">
+      <div class="badge-item"><span class="badge-icon">🏭</span>
+        <div class="badge-text">Pharma HVAC Specialists<span> cGMP / EMA / FDA / WHO Compliance</span></div>
+      </div>
+      <div class="badge-item"><span class="badge-icon">🏥</span>
+        <div class="badge-text">Hospital & OT HVAC Experts<span>Operation Theatre Standards</span></div>
+      </div>
+      <div class="badge-item"><span class="badge-icon">📋</span>
+        <div class="badge-text"> Commissioning & Validation <span>DQ / IQ / OQ / PQ Documentation</span></div>
+      </div>
+      <div class="badge-item">
+        <span class="badge-icon">🌍</span>
+        <div class="badge-text">Middle East & North Africa Execution<span>Based in Dubai · Global Projects</span></div>
+      </div>
+      <div class="hero-scroll"><span class="scroll-text">Scroll</span>
+        <div class="scroll-line"></div>
+      </div>
+  </section>
+
+  <!-- ═══ TICKER ═══ -->
+  <div class="ticker">
+    <div class="ticker-inner">
+      <span>Pharmaceutical HVAC</span><span class="dot">◆</span><span>Cleanroom Design</span><span
+        class="dot">◆</span><span>Hospital HVAC Systems</span><span class="dot">◆</span><span>Operation
+        Theatres</span><span class="dot">◆</span><span>BMS Integration</span><span class="dot">◆</span><span>HVAC
+        Validation DQ/IQ/OQ/PQ</span><span class="dot">◆</span><span>Process Cooling</span><span
+        class="dot">◆</span><span>HEPA Filtration</span><span class="dot">◆</span><span>AHU Solutions</span><span
+        class="dot">◆</span><span>Cleanroom Retrofitting</span><span class="dot">◆</span><span>Laboratory
+        HVAC</span><span class="dot">◆</span><span>Food Industry HVAC</span><span class="dot">◆</span>
+      <span>Pharmaceutical HVAC</span><span class="dot">◆</span><span>Cleanroom Design</span><span
+        class="dot">◆</span><span>Hospital HVAC Systems</span><span class="dot">◆</span><span>Operation
+        Theatres</span><span class="dot">◆</span><span>BMS Integration</span><span class="dot">◆</span><span>HVAC
+        Validation DQ/IQ/OQ/PQ</span><span class="dot">◆</span><span>Process Cooling</span><span
+        class="dot">◆</span><span>HEPA Filtration</span><span class="dot">◆</span><span>AHU Solutions</span><span
+        class="dot">◆</span><span>Cleanroom Retrofitting</span><span class="dot">◆</span><span>Laboratory
+        HVAC</span><span class="dot">◆</span><span>Food Industry HVAC</span><span class="dot">◆</span>
+    </div>
+  </div>
+
+  <!-- ═══ TRUST BAR ═══ -->
+  <div class="trust-bar">
+    <div class="trust-inner">
+      <div class="trust-item"><span class="trust-check">✔</span><span class="trust-label">Pharmaceutical HVAC
+          Specialists</span></div>
+      <div class="trust-item"><span class="trust-check">✔</span><span class="trust-label">Hospital & Operation Theatre
+          Experts</span></div>
+      <div class="trust-item"><span class="trust-check">✔</span><span class="trust-label2">cGMP / EMA / FDA / WHO
+          COMPLIANCE</span></div>
+      <div class="trust-item"><span class="trust-check">✔</span><span class="trust-label">HVAC Commissioning &
+          Validation</span></div>
+      <div class="trust-item"><span class="trust-check">✔</span><span class="trust-label">Middle East & North Africa
+          Project Execution</span></div>
+    </div>
+  </div>
+
+  <!-- ═══ INDUSTRIES ═══ -->
+  <section class="industries-section" id="industries">
+    <div class="section-wrap">
+      <div class="sec-header reveal">
+        <div class="section-tag" style="justify-content:center">
+          <div class="tag-line"></div><span class="tag-text">Industries We Serve</span>
+          <div class="tag-line"></div>
+        </div>
+        <h2 style="margin-top:0.8rem">Critical <span>Environments</span><br>Demand Specialist Expertise</h2>
+        <p>We design and deliver highly specialized HVAC and controlled environment systems for facilities where
+          performance, compliance, and precision are critical.</p>
+      </div>
+      <div class="industries-grid">
+        <div class="industry-card reveal"><span class="ind-icon">🧬</span>
+          <div class="ind-title">Pharmaceutical Manufacturing</div>
+          <div class="ind-desc">cGMP -compliant HVAC systems, cleanroom environments, pressure control, temperature
+            management, HEPA filtration, and validation support for pharmaceutical production facilities.</div>
+        </div>
+        <div class="industry-card reveal"><span class="ind-icon">🏥</span>
+          <div class="ind-title">Hospitals & Healthcare Facilities</div>
+          <div class="ind-desc">Operation theatre HVAC systems, isolation rooms, ICU ventilation, infection control
+            environments, and specialized healthcare HVAC solutions built to international standards.</div>
+        </div>
+        <div class="industry-card reveal"><span class="ind-icon">🔬</span>
+          <div class="ind-title">Laboratories & Research Centres</div>
+          <div class="ind-desc">Controlled environments for research laboratories, testing facilities, clean air zones,
+            pressure-controlled spaces, and contamination-sensitive operations.</div>
+        </div>
+        <div class="industry-card reveal"><span class="ind-icon">🍽️</span>
+          <div class="ind-title">Food Processing Facilities</div>
+          <div class="ind-desc">Temperature-controlled HVAC systems, hygienic ventilation design, and process cooling
+            solutions that support food safety and production efficiency.</div>
+        </div>
+        <div class="industry-card reveal"><span class="ind-icon">⚙️</span>
+          <div class="ind-title">Industrial Process Cooling</div>
+          <div class="ind-desc">Custom-engineered chilled water systems, process cooling, AHU solutions, and industrial
+            HVAC systems for mission-critical operations and manufacturing processes.</div>
+        </div>
+        <div class="industry-card reveal"><span class="ind-icon">🏢</span>
+          <div class="ind-title">Commercial & Specialized Projects</div>
+          <div class="ind-desc">High-performance HVAC solutions for complex commercial facilities requiring advanced air
+            control, BMS integration, and precision environmental management.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ SERVICES ═══ -->
+  <section class="services-section" id="services">
+    <div class="section-wrap">
+      <div class="sec-header reveal">
+        <div class="section-tag" style="justify-content:center">
+          <div class="tag-line"></div><span class="tag-text">End-to-End Engineering Solutions</span>
+          <div class="tag-line"></div>
+        </div>
+        <h2 style="margin-top:0.8rem">From <span>Concept</span> to <span>Validation</span></h2>
+        <p>Complete Cleanroom and HVAC engineering solutions designed for compliance, reliability, and long-term
+          performance.</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card reveal"><span class="svc-icon">🧫</span>
+          <div class="svc-title">Pharmaceutical Cleanroom HVAC</div>
+          <div class="svc-desc">Design, installation, and maintenance of cGMP -compliant cleanroom HVAC systems with
+            pressure cascades, HEPA filtration, environmental monitoring, and contamination control.</div><a
+            href="#contact" class="svc-link">Enquire →</a>
+        </div>
+        <div class="service-card reveal"><span class="svc-icon">🫀</span>
+          <div class="svc-title">Hospital & Operation Theatre HVAC</div>
+          <div class="svc-desc">Precision HVAC systems for operating rooms, ICUs, isolation rooms, and critical
+            healthcare spaces where infection control and air quality are essential.</div><a href="#contact"
+            class="svc-link">Enquire →</a>
+        </div>
+        <div class="service-card reveal"><span class="svc-icon">📋</span>
+          <div class="svc-title">HVAC Validation Services</div>
+          <div class="svc-desc">Complete validation support including DQ, IQ, OQ, PQ documentation, airflow balancing,
+            pressure testing, and performance verification for regulated industries.</div><a href="#contact"
+            class="svc-link">Enquire →</a>
+        </div>
+        <div class="service-card reveal"><span class="svc-icon">💻</span>
+          <div class="svc-title">BMS & EMS </div>
+          <div class="svc-desc">Smart monitoring and control systems for HVAC optimization, operational efficiency,
+            alarm management, and facility-wide automation.</div><a href="#contact" class="svc-link">Enquire →</a>
+        </div>
+        <div class="service-card reveal"><span class="svc-icon">🌊</span>
+          <div class="svc-title">Process Cooling Systems</div>
+          <div class="svc-desc">Chilled water systems, precision cooling, and industrial process temperature control
+            solutions engineered for reliability and uptime.</div><a href="#contact" class="svc-link">Enquire →</a>
+        </div>
+        <div class="service-card reveal"><span class="svc-icon">🔧</span>
+          <div class="svc-title">Cleanroom Retrofitting & Upgrades</div>
+          <div class="svc-desc">Modernization of existing facilities to meet updated compliance standards, performance
+            requirements, and operational efficiency goals.</div><a href="#contact" class="svc-link">Enquire →</a>
+        </div>
+        <div class="service-card reveal"><span class="svc-icon">🌀</span>
+          <div class="svc-title">Air Handling Units (AHU)</div>
+          <div class="svc-desc">Custom AHU solutions designed for filtration, humidity control, airflow management, and
+            specialized environmental performance.</div><a href="#contact" class="svc-link">Enquire →</a>
+        </div>
+        <div class="service-card reveal"><span class="svc-icon">🔬</span>
+          <div class="svc-title">HEPA Filtration Systems</div>
+          <div class="svc-desc">Advanced filtration systems for contamination-sensitive environments requiring strict
+            particulate control and clean air compliance.</div><a href="#contact" class="svc-link">Enquire →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ WHY US ═══ -->
+  <section class="whyus-section" id="why-us">
+    <div class="section-wrap">
+      <div class="section-tag reveal">
+        <div class="tag-line"></div><span class="tag-text">Why Leading Facilities Choose CRP</span>
+      </div>
+      <h2 class="reveal" style="margin-top:0.8rem">Trusted Engineering.<br><span>Proven Compliance.</span><br>Reliable
+        Performance.</h2>
+      <div class="whyus-grid">
+        <div class="whyus-items">
+          <div class="why-item reveal">
+            <div class="why-title">Regulatory Compliance Expertise</div>
+            <div class="why-desc">We understand the strict compliance requirements of pharmaceutical, healthcare, and
+              controlled-environment facilities, ensuring every system supports cGMP , EMA, FDA, WHO, and ISO
+              expectations.</div>
+          </div>
+          <div class="why-item reveal">
+            <div class="why-title">Specialized Engineering Team</div>
+            <div class="why-desc">Our experienced HVAC professionals bring deep technical expertise in critical facility
+              systems where precision performance is non-negotiable.</div>
+          </div>
+          <div class="why-item reveal">
+            <div class="why-title">Validation-Driven Execution</div>
+            <div class="why-desc">We support complete HVAC validation including DQ, IQ, OQ, PQ protocols, ensuring
+              project readiness for inspections, approvals, and long-term compliance.</div>
+          </div>
+          <div class="why-item reveal">
+            <div class="why-title">End-to-End Project Delivery</div>
+            <div class="why-desc">From design, supply, installation, testing, balancing, commissioning, and maintenance
+              — we deliver complete project ownership with a single point of accountability.</div>
+          </div>
+          <div class="why-item reveal">
+            <div class="why-title">Custom-Built Solutions</div>
+            <div class="why-desc">Every facility has unique operational demands. We engineer solutions tailored to your
+              exact process, compliance, and performance requirements.</div>
+          </div>
+          <div class="why-item reveal">
+            <div class="why-title">Long-Term Reliability</div>
+            <div class="why-desc">Our systems are designed for uptime, efficiency, sustainability, and operational
+              confidence for years to come.</div>
+          </div>
+        </div>
+        <div>
+          <div class="compliance-box reveal">
+            <div class="compliance-title">Built for Compliance</div>
+            <p style="font-size:0.8rem;color:var(--muted);font-weight:300;margin-bottom:1.5rem;line-height:1.7">Our
+              engineering approach is designed around industry regulations, operational safety, and facility
+              certification requirements.</p>
+            <div class="comp-list">
+              <div class="comp-item"><span class="comp-check">✔</span><span class="comp-text2">cGMP COMPLIANCE</span>
+              </div>
+              <div class="comp-item"><span class="comp-check">✔</span><span class="comp-text">EMA Compliance</span>
+              </div>
+              <div class="comp-item"><span class="comp-check">✔</span><span class="comp-text">WHO Standards</span></div>
+              <div class="comp-item"><span class="comp-check">✔</span><span class="comp-text">FDA Support
+                  Requirements</span></div>
+              <div class="comp-item"><span class="comp-check">✔</span><span class="comp-text">ISO Compliance</span>
+              </div>
+              <div class="comp-item"><span class="comp-check">✔</span><span class="comp-text">HVAC Validation</span>
+              </div>
+              <div class="comp-item"><span class="comp-check">✔</span><span class="comp-text">HEPA Filtration
+                  Standards</span></div>
+              <div class="comp-item"><span class="comp-check">✔</span><span class="comp-text">Hospital OT
+                  Standards</span></div>
+              <div class="comp-item"><span class="comp-check">✔</span><span class="comp-text">Pressure Cascade
+                  Systems</span></div>
+              <div class="comp-item"><span class="comp-check">✔</span><span class="comp-text">Critical Temperature &
+                  Humidity Control</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══ CTA BAND ═══ -->
+  <div class="cta-band">
+    <div class="section-wrap">
+      <div class="section-tag" style="justify-content:center">
+        <div class="tag-line"></div><span class="tag-text">Planning a New Facility or HVAC Upgrade?</span>
+        <div class="tag-line"></div>
+      </div>
+      <h2 style="margin-top:0.8rem">Speak Directly with Our<br><span>Technical Experts</span></h2>
+      <p>Project consultation, compliance support, HVAC design, validation services, and complete engineering solutions
+        tailored to your facility.</p>
+      <div class="btn-row">
+        <a href="#contact" class="btn-primary">Request Project Consultation</a>
+        <a href="mailto:sales@crpuae.com" class="btn-ghost">Email Our Sales Team</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ CONTACT ═══ -->
+  <section class="contact-section" id="contact">
+    <div class="section-wrap">
+      <div class="contact-grid">
+        <div>
+          <div class="section-tag reveal">
+            <div class="tag-line"></div><span class="tag-text">Let's Discuss Your Project</span>
+          </div>
+          <div class="contact-tagline reveal">Let's Build<br><span>Something</span><br>Exceptional</div>
+          <p class="contact-lead reveal">Whether building a new pharmaceutical facility, upgrading hospital HVAC
+            systems, retrofitting cleanrooms, or planning industrial process cooling — our team is ready to help.</p>
+          <div class="contact-deets">
+            <div class="c-row reveal">
+              <div class="c-icon">📍</div>
+              <div>
+                <div class="c-lbl">Address</div>
+                <div class="c-val">CRP Airconditioning Services LLC<br>PO Box 97003, Dubai, UAE</div>
+              </div>
+            </div>
+            <div class="c-row reveal">
+              <div class="c-icon">📧</div>
+              <div>
+                <div class="c-lbl">Sales Enquiry</div>
+                <div class="c-val"><a href="mailto:sales@crpuae.com">sales@crpuae.com</a></div>
+              </div>
+            </div>
+            <div class="c-row reveal">
+              <div class="c-icon">📧</div>
+              <div>
+                <div class="c-lbl">General Queries</div>
+                <div class="c-val"><a href="mailto:info@crpuae.com">info@crpuae.com</a></div>
+              </div>
+            </div>
+            <div class="c-row reveal">
+              <div class="c-icon">📱</div>
+              <div>
+                <div class="c-lbl">Mobile</div>
+                <div class="c-val"><a href="tel:+971504641821">+971 50 464 1821</a></div>
+              </div>
+            </div>
+            <div class="c-row reveal">
+              <div class="c-icon">📠</div>
+              <div>
+                <div class="c-lbl">Fax</div>
+                <div class="c-val">+971 4 328 2150</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form-box reveal">
+          <div class="form-title">Get Technical Consultation</div>
+          <div class="fr">
+            <div class="fg"><label class="fl">Full Name *</label><input type="text" id="fullName" class="fi"
+                placeholder="Your full name"></div>
+            <div class="fg"><label class="fl">Company Name *</label><input type="text" id="companyName" class="fi"
+                placeholder="Company LLC"></div>
+          </div>
+          <div class="fr">
+            <div class="fg">
+              <label class="fl">Industry Type</label>
+              <select id="industry" class="fs">
+                <option value="">Select industry…</option>
+                <option>Pharmaceutical Manufacturing</option>
+                <option>Electronic Manufacturing </option>
+                <option>Hospitals & Healthcare</option>
+                <option>Laboratories & Research</option>
+                <option>Food Processing</option>
+                <option>Industrial / Manufacturing</option>
+                <option>Commercial</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="fg">
+              <label class="fl">Project Type</label>
+              <select id="projectType" class="fs">
+                <option value="">Select type…</option>
+                <option>New Facility Build</option>
+                <option>HVAC Upgrade / Retrofit</option>
+                <option>Cleanroom Design</option>
+                <option>Validation Services</option>
+                <option>BMS Integration</option>
+                <option>Maintenance Contract</option>
+                <option>Consultation Only</option>
+              </select>
+            </div>
+          </div>
+          <div class="fr">
+            <div class="fg"><label class="fl">Phone Number *</label><input type="tel" id="phone" class="fi"
+                placeholder="+971 xx xxx xxxx"></div>
+            <div class="fg"><label class="fl">Email Address *</label><input type="email" id="email" class="fi"
+                placeholder="you@company.com"></div>
+          </div>
+          <div class="fg"><label class="fl">Facility Location</label><input type="text" id="location" class="fi"
+              placeholder="City, Country"></div>
+          <div class="fg"><label class="fl">Project Details</label><textarea id="details" class="ft"
+              placeholder="Describe your project..."></textarea></div>
+          <button type="button" class="fsub" id="submitBtn" onclick="sendEnquiry()">Get Technical Consultation
+            →</button>
+          <div id="successMsg"
+            style="display:none; color:var(--accent); font-family:'DM Mono',monospace; font-size:0.7rem; margin-top:10px; text-align:center;">
+            ✓ Your email app should now open with your enquiry filled in — just press Send.<br>If nothing opened, please email us at <a href="mailto:sales@crpuae.com" style="color:var(--accent)">sales@crpuae.com</a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer>
+    <div class="footer-top">
+      <div>
+        <div class="footer-logo-row">
+          <!-- Footer logo slot — same swap as nav logo above -->
+          <img src="assets/WaveHQnoBG.png" alt="CRP" class="footer-logo-img"
+            onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div style="display:none" class="footer-logo-mark">CRP</div>
+          <div class="footer-brand-name">CRP Air Conditioning Services LLC<span>Dubai, United Arab Emirates</span></div>
+        </div>
+        <p class="footer-tagline">Precision Engineering. Regulatory Compliance. Reliable Performance.<br>Your
+          Specialized Cleanroom & HVAC Partner Across Middle East & North Africa.</p>
+        <div class="footer-mini-contact">
+          <a href="mailto:sales@crpuae.com">sales@crpuae.com</a>
+          <a href="mailto:info@crpuae.com">info@crpuae.com</a>
+          <a href="tel:+971504641821">+971 50 464 1821</a>
+        </div>
+      </div>
+      <div class="fcol">
+        <div class="fcol-title">Services</div>
+        <ul>
+          <li><a href="#services">Pharmaceutical Cleanroom HVAC</a></li>
+          <li><a href="#services">Hospital HVAC Systems</a></li>
+          <li><a href="#services">Operation Theater HVAC</a></li>
+          <li><a href="#services">HVAC Validation</a></li>
+          <li><a href="#services">BMS & Controls</a></li>
+          <li><a href="#services">Process Cooling</a></li>
+          <li><a href="#services">AHU Solutions</a></li>
+          <li><a href="#services">HEPA Filtration</a></li>
+          <li><a href="#services">Cleanroom Retrofitting</a></li>
+        </ul>
+      </div>
+      <div class="fcol">
+        <div class="fcol-title">Industries</div>
+        <ul>
+          <li><a href="#industries">Pharmaceutical</a></li>
+          <li><a href="#industries">Healthcare</a></li>
+          <li><a href="#industries">Laboratories</a></li>
+          <li><a href="#industries">Food Processing</a></li>
+          <li><a href="#industries">Industrial Facilities</a></li>
+          <li><a href="#industries">Commercial Projects</a></li>
+        </ul>
+      </div>
+      <div class="fcol">
+        <div class="fcol-title">Quick Links</div>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#industries">Industries</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#why-us">Why CRP</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">© 2025 CRP Airconditioning Services LLC · PO Box 97003, Dubai, UAE · All rights reserved
+      </div>
+      <div class="footer-trust">Precision Engineering · <span>Regulatory Compliance</span> · Reliable Performance</div>
+    </div>
+  </footer>
+
+  <script>
+  // Intersection Observer for animations (Keeping your original logic)
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); }
+    });
+  }, { threshold: 0.08 });
+  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+
+  // CONTACT FORM → opens the visitor's email app with a pre-filled message to sales
+  function sendEnquiry() {
+    const btn = document.getElementById('submitBtn');
+    const v = id => document.getElementById(id).value.trim();
+    const data = {
+      fullName: v('fullName'), companyName: v('companyName'),
+      industry: v('industry'), projectType: v('projectType'),
+      phone: v('phone'), email: v('email'),
+      location: v('location'), details: v('details')
+    };
+
+    if (!data.fullName || !data.companyName || !data.email || !data.phone) {
+      alert("Please fill in all required fields (*)");
+      return;
+    }
+
+    const subject = 'Technical Consultation Request – ' + data.companyName;
+    const body =
+      'Hello CRP Team,\n\n' +
+      'I would like to request a technical consultation.\n\n' +
+      'Full Name: ' + data.fullName + '\n' +
+      'Company: ' + data.companyName + '\n' +
+      'Industry: ' + (data.industry || '-') + '\n' +
+      'Project Type: ' + (data.projectType || '-') + '\n' +
+      'Phone: ' + data.phone + '\n' +
+      'Email: ' + data.email + '\n' +
+      'Facility Location: ' + (data.location || '-') + '\n\n' +
+      'Project Details:\n' + (data.details || '-') + '\n\n' +
+      'Regards,\n' + data.fullName;
+
+    window.location.href = 'mailto:sales@crpuae.com'
+      + '?subject=' + encodeURIComponent(subject)
+      + '&body=' + encodeURIComponent(body);
+
+    btn.innerText = 'Opening your email app…';
+    setTimeout(() => {
+      document.getElementById('successMsg').style.display = 'block';
+      btn.innerText = 'Get Technical Consultation →';
+    }, 1000);
+  }
+  </script>
+</body>
+
+</html>
